@@ -1,7 +1,7 @@
-function MyHOC(Component) {
-  return (props) => ( 
+function MyHOC(Component, props) {
+  return (
     <div className="wrapper">
-      <Component {...props} />
+      {Component({...props})}
     </div>
   )
 }
